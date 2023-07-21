@@ -1,0 +1,23 @@
+.send-money .content p,
+.bill-pay .content p,
+.cash-out .content p,
+.mobile-recharge .content p,
+.download-app .content p {
+  padding: 0.4rem 0;
+}
+
+.bill-pay,
+.mobile-recharge,
+.contact-us {
+  background: #f5f3f3;
+}
+
+footer .footer-container {
+  background: 
+    linear-gradient(to left, #02282b, #156469);
+  
+}
+
+footer .top p, ul li {
+  padding: .5rem 0;
+}
