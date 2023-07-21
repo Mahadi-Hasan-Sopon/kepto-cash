@@ -1,8 +1,11 @@
+
+
 function Navbar() {
+ 
   return (
-    <div className="flex justify-between px-36 text-white bg-neutral-950/75 py-2.5">
+    <div className="hidden lg:flex justify-between px-20 lg:px-36 text-white py-2.5 items-center" id="navbar">
       <div className="logo">
-        <img src="../../public/assets/logo.svg" alt="" />
+        <img src="/assets/logo.svg" alt="" />
       </div>
       <ul className="nav-items flex gap-6 text-base font-medium items-center">
         <li>
@@ -30,8 +33,8 @@ function Navbar() {
         <li>
           <a href="#" className="nav-links flex gap-2 items-center">
             <span>
-              <img src="../../public/assets/world.svg" alt="" />
-            </span>{" "}
+              <img src="/assets/world.svg" alt="" />
+            </span>
             English
           </a>
         </li>

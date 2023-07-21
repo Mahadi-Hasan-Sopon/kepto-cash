@@ -4,24 +4,55 @@ import Navbar from "./components/Navbar";
 
 import "./app.css";
 import ContactUsForm from "./components/ContactUsForm";
+import { useEffect, useRef, useState } from "react";
 
 function App() {
+
+  const [isIntersecting, setIsIntersecting] = useState(true);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      { rootMargin: "-120px" }
+    );
+
+    // console.log(isIntersecting);
+    observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, [isIntersecting]);
+
+  useEffect(() => {
+    const navbar = document.getElementById('navbar');
+    if (!isIntersecting) {
+      navbar.classList.add("bg-neutral-950/75");
+      }
+     else {
+      navbar.classList.remove("bg-neutral-950/75");
+      };
+  }, [isIntersecting]);
+
+
   return (
     <div className="relative font-opensans">
       <div className="sticky top-0 z-20 bg-transparent text-3xl text-sky-500 text-bold text-center">
         <Navbar />
       </div>
-      <Banner />
-      <section className="send-money px-36 grid grid-cols-2 justify-items-center items-center">
-        <div className="content flex flex-col justify-center items-end">
+      <Banner scrollRef={ref} />
+      <section className="send-money px-20 lg:px-36 grid lg:grid-cols-2 justify-items-center items-center gap-3 py-5">
+        <div className="content flex flex-col justify-center lg:items-end">
           <h1 className="text-secColor text-3xl pb-3 font-bold">Send Money</h1>
-          <p className="text-base text-blackColor font-semibold">
+          <p className="text-base text-blackColor font-semibold lg:text-right">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
           <p className="text-base text-blackColor font-semibold">
             Lorem ipsum dolor sit amet, impedit!
           </p>
-          <div className="text-base text-para font-normal text-right">
+          <div className="text-base text-para font-normal lg:text-right">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatem
@@ -40,12 +71,12 @@ function App() {
           </Button>
         </div>
         <div className="img py-5">
-          <img src="../public/assets/send.svg" alt="" />
+          <img src="/assets/send.svg" alt="" />
         </div>
       </section>
-      <section className="bill-pay py-5 px-36 grid grid-cols-2 justify-items-center items-center">
+      <section className="bill-pay py-5 px-20 lg:px-36 grid lg:grid-cols-2 justify-items-center items-center gap-10">
         <div className="img py-5">
-          <img src="../public/assets/mobile.svg" alt="" />
+          <img src="/assets/mobile.svg" alt="" />
         </div>
         <div className="content flex flex-col justify-center items-start">
           <h1 className="text-secColor text-3xl pb-3 font-bold">Bill Pay</h1>
@@ -72,8 +103,8 @@ function App() {
           </Button>
         </div>
       </section>
-      <section className="cash-out py-5 px-36 grid grid-cols-2 justify-items-center items-center">
-        <div className="content flex flex-col justify-center items-start">
+      <section className="cash-out py-5 px-20 lg:px-36 grid lg:grid-cols-2 justify-items-center items-center">
+        <div className="content flex flex-col justify-center items-start order-2 lg:order-1">
           <h1 className="text-secColor text-3xl pb-3 font-bold">Cash Out</h1>
           <p className="text-base text-blackColor font-semibold pb-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -97,13 +128,13 @@ function App() {
             </span>
           </Button>
         </div>
-        <div className="img py-5">
-          <img src="../public/assets/cash-out.svg" alt="" />
+        <div className="img py-5 lg:order-2">
+          <img src="/assets/cash-out.svg" alt="" />
         </div>
       </section>
-      <section className="mobile-recharge py-5 px-36 grid grid-cols-2 justify-items-center items-center z-10">
+      <section className="mobile-recharge py-5 px-20 lg:px-36 grid lg:grid-cols-2 justify-items-center items-center z-10">
         <div className="img py-5">
-          <img src="../public/assets/mobile-recharge.svg" alt="" />
+          <img src="/assets/mobile-recharge.svg" alt="" />
         </div>
         <div className="content flex flex-col justify-center items-start">
           <h1 className="text-secColor text-3xl pb-3 font-bold">
@@ -132,8 +163,8 @@ function App() {
           </Button>
         </div>
       </section>
-      <section className="download-app px-36 pb-3 grid grid-cols-2 justify-items-center items-center  overflow-hidden">
-        <div className="content flex flex-col justify-center items-start mt-5">
+      <section className="download-app px-20 lg:px-36 pb-3 grid lg:grid-cols-2 justify-items-center items-center  overflow-hidden">
+        <div className="content flex flex-col justify-center items-start my-5">
           <h1 className="text-secColor text-3xl pb-3 font-bold">
             Download Kepto Cash
           </h1>
@@ -147,19 +178,19 @@ function App() {
           </div>
           <div className="btn-group flex gap-4">
             <Button className="my-3 cursor-pointer">
-              <img src="../public/assets/app-store.svg" alt="" />
+              <img src="/assets/app-store.svg" alt="" />
             </Button>
             <Button className="my-3 cursor-pointer">
-              <img src="../public/assets/google-play.svg" alt="" />
+              <img src="/assets/google-play.svg" alt="" />
             </Button>
           </div>
         </div>
-        <div className="img -mt-10 pb-5">
-          <img src="../public/assets/bottom.svg" alt="" />
+        <div className="img lg:-mt-10 pb-5">
+          <img src="/assets/bottom.svg" alt="" />
         </div>
       </section>
-      <section className="px-36 py-3 contact-us">
-        <h1 className="text-secColor text-bold text-5xl pb-3 text-center">
+      <section className="contact-us px-20 lg:px-36 py-5">
+        <h1 className="text-secColor font-bold text-5xl pb-3 text-center">
           Contact Us
         </h1>
         <p className="text-base text-blackColor font-semibold w-3/6 text-center mx-auto pb-4">
@@ -169,16 +200,16 @@ function App() {
         <ContactUsForm />
       </section>
       <footer className="w-full">
-        <div className="footer-container pt-5 px-36 text-white text-base font-normal">
-          <div className="top grid grid-cols-2 md:grid-cols-4 items-center justify-items-center">
+        <div className="footer-container pt-5 px-20 lg:px-36 text-white text-base font-normal">
+          <div className="top grid md:grid-cols-2 md:flex md:flex-wrap md:gap-5 md:justify-between md:items-center md:justify-items-center">
             <div className="footer-col">
-              <img src="../public/assets/footer-logo.svg" alt="" />
+              <img src="/assets/footer-logo.svg" alt="" />
               <p>Sample text sample</p>
               <p>sample text sampletext</p>
               <p>textSample text textsample</p>
             </div>
 
-            <div className="company">
+            <div className="company py-4 md:py-0">
               <p className="font-semibold">Company</p>
               <ul>
                 <li>
@@ -202,7 +233,7 @@ function App() {
               <p>+(123) 456 - 7890</p>
             </div>
 
-            <div className="newsletter">
+            <div className="newsletter py-4 md:py-1">
               <p className="font-semibold pb-3">Join Newsletter</p>
               <input
                 className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 rounded-full"
@@ -218,7 +249,7 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="bottom flex justify-between py-5">
+          <div className="bottom flex justify-evenly py-5">
             <p>© All rights reserved - Kepto Cash</p>
             <p>Privacy Policy Terms & Conditions</p>
           </div>
