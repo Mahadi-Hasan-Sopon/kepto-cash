@@ -21,12 +21,12 @@ export default function Banner({scrollRef}) {
             </p>
             <button className="flex gap-3 text-secColor font-medium cursor-pointer">
               Learn More <span>
-                <img src="/assets/next arrow.svg" alt="" />
+                <img src="assets/next arrow.svg" alt="" />
               </span>
             </button>
           </div>
           <div className="image">
-            <img className="md:w-3/4 lg:w-full mx-auto" src="/assets/banner.png" alt="" />
+            <img className="md:w-3/4 lg:w-full mx-auto" src="assets/banner.png" alt="" />
           </div>
         </div>
       </CCarouselItem>
@@ -46,12 +46,12 @@ export default function Banner({scrollRef}) {
             </p>
             <button className="flex gap-3 text-secColor font-medium cursor-pointer">
               Learn More <span>
-                <img src="/assets/next arrow.svg" alt="" />
+                <img src="assets/next arrow.svg" alt="" />
               </span>
             </button>
           </div>
           <div className="image">
-            <img className="md:w-3/4 lg:w-full mx-auto" src="/assets/banner.png" alt="" />
+            <img className="md:w-3/4 lg:w-full mx-auto" src="assets/banner.png" alt="" />
           </div>
         </div>
       </CCarouselItem>
@@ -71,12 +71,12 @@ export default function Banner({scrollRef}) {
             </p>
             <button className="flex gap-3 text-secColor font-medium cursor-pointer">
               Learn More <span>
-                <img src="/assets/next arrow.svg" alt="" />
+                <img src="assets/next arrow.svg" alt="" />
               </span>
             </button>
           </div>
           <div className="image">
-            <img className="md:w-3/4 lg:w-full mx-auto" src="/assets/banner.png" alt="" />
+            <img className="md:w-3/4 lg:w-full mx-auto" src="assets/banner.png" alt="" />
           </div>
         </div>
       </CCarouselItem>
