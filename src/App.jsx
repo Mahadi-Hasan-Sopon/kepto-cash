@@ -7,12 +7,10 @@ import ContactUsForm from "./components/ContactUsForm";
 import { useEffect, useRef, useState } from "react";
 
 function App() {
-
   const [isIntersecting, setIsIntersecting] = useState(true);
   const ref = useRef(null);
 
   useEffect(() => {
-    
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
@@ -27,15 +25,13 @@ function App() {
   }, [isIntersecting]);
 
   useEffect(() => {
-    const navbar = document.getElementById('navbar');
+    const navbar = document.getElementById("navbar");
     if (!isIntersecting) {
       navbar.classList.add("bg-neutral-950/75");
-      }
-     else {
+    } else {
       navbar.classList.remove("bg-neutral-950/75");
-      };
+    }
   }, [isIntersecting]);
-
 
   return (
     <div className="relative font-opensans">
@@ -66,7 +62,7 @@ function App() {
           <Button className="text-white flex gap-2 text-base font-medium bg-secColor py-2 px-3 rounded my-3">
             Learn More
             <span>
-              <img src="../public/assets/next arrow white.svg" alt="" />
+              <img src="/assets/next arrow white.svg" alt="" />
             </span>
           </Button>
         </div>
@@ -98,7 +94,7 @@ function App() {
           <Button className="text-white flex gap-2 text-base font-medium bg-secColor py-2 px-3 rounded my-3">
             Learn More
             <span>
-              <img src="../public/assets/next arrow white.svg" alt="" />
+              <img src="/assets/next arrow white.svg" alt="" />
             </span>
           </Button>
         </div>
@@ -124,7 +120,7 @@ function App() {
           <Button className="text-white flex gap-2 text-base font-medium bg-secColor py-2 px-3 rounded my-3">
             Learn More
             <span>
-              <img src="../public/assets/next arrow white.svg" alt="" />
+              <img src="/assets/next arrow white.svg" alt="" />
             </span>
           </Button>
         </div>
@@ -158,7 +154,7 @@ function App() {
           <Button className="text-white flex gap-2 text-base font-medium bg-secColor py-2 px-3 rounded my-3">
             Learn More
             <span>
-              <img src="../public/assets/next arrow white.svg" alt="" />
+              <img src="/assets/next arrow white.svg" alt="" />
             </span>
           </Button>
         </div>
