@@ -4,7 +4,7 @@ import "./banner.css";
 
 export default function Banner({scrollRef}) {
   return (
-    <CCarousel controls indicators interval={100} className="lg:-mt-24" id="carousel-banner" ref={scrollRef}>
+    <CCarousel controls indicators interval={5000} className="lg:-mt-24" id="carousel-banner" ref={scrollRef}>
       <CCarouselItem>
         <div className="carousel-container w-full h-full lg:grid lg:grid-cols-2 items-center justify-items-center lg:px-36 py-16 px-20">
           <div className="content lg:w-3/4 lg:ps-12">
