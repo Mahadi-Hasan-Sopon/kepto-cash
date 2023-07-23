@@ -62,17 +62,17 @@ function App() {
           <Button className="text-white flex gap-2 text-base font-medium bg-secColor py-2 px-3 rounded my-3">
             Learn More
             <span>
-              <img src="/assets/next arrow white.svg" alt="" />
+              <img src="assets/next arrow white.svg" alt="" />
             </span>
           </Button>
         </div>
         <div className="img py-5">
-          <img src="/assets/send.svg" alt="" />
+          <img src="assets/send.svg" alt="" />
         </div>
       </section>
       <section className="bill-pay py-5 px-20 lg:px-36 grid lg:grid-cols-2 justify-items-center items-center gap-10">
         <div className="img py-5">
-          <img src="/assets/mobile.svg" alt="" />
+          <img src="assets/mobile.svg" alt="" />
         </div>
         <div className="content flex flex-col justify-center items-start">
           <h1 className="text-secColor text-3xl pb-3 font-bold">Bill Pay</h1>
@@ -94,7 +94,7 @@ function App() {
           <Button className="text-white flex gap-2 text-base font-medium bg-secColor py-2 px-3 rounded my-3">
             Learn More
             <span>
-              <img src="/assets/next arrow white.svg" alt="" />
+              <img src="assets/next arrow white.svg" alt="" />
             </span>
           </Button>
         </div>
@@ -120,17 +120,17 @@ function App() {
           <Button className="text-white flex gap-2 text-base font-medium bg-secColor py-2 px-3 rounded my-3">
             Learn More
             <span>
-              <img src="/assets/next arrow white.svg" alt="" />
+              <img src="assets/next arrow white.svg" alt="" />
             </span>
           </Button>
         </div>
         <div className="img py-5 lg:order-2">
-          <img src="/assets/cash-out.svg" alt="" />
+          <img src="assets/cash-out.svg" alt="" />
         </div>
       </section>
       <section className="mobile-recharge py-5 px-20 lg:px-36 grid lg:grid-cols-2 justify-items-center items-center z-10">
         <div className="img py-5">
-          <img src="/assets/mobile-recharge.svg" alt="" />
+          <img src="assets/mobile-recharge.svg" alt="" />
         </div>
         <div className="content flex flex-col justify-center items-start">
           <h1 className="text-secColor text-3xl pb-3 font-bold">
@@ -154,7 +154,7 @@ function App() {
           <Button className="text-white flex gap-2 text-base font-medium bg-secColor py-2 px-3 rounded my-3">
             Learn More
             <span>
-              <img src="/assets/next arrow white.svg" alt="" />
+              <img src="assets/next arrow white.svg" alt="" />
             </span>
           </Button>
         </div>
@@ -174,15 +174,15 @@ function App() {
           </div>
           <div className="btn-group flex gap-4">
             <Button className="my-3 cursor-pointer">
-              <img src="/assets/app-store.svg" alt="" />
+              <img src="assets/app-store.svg" alt="" />
             </Button>
             <Button className="my-3 cursor-pointer">
-              <img src="/assets/google-play.svg" alt="" />
+              <img src="assets/google-play.svg" alt="" />
             </Button>
           </div>
         </div>
         <div className="img lg:-mt-10 pb-5">
-          <img src="/assets/bottom.svg" alt="" />
+          <img src="assets/bottom.svg" alt="" />
         </div>
       </section>
       <section className="contact-us px-20 lg:px-36 py-5">
@@ -199,7 +199,7 @@ function App() {
         <div className="footer-container pt-5 px-20 lg:px-36 text-white text-base font-normal">
           <div className="top grid md:grid-cols-2 md:flex md:flex-wrap md:gap-5 md:justify-between md:items-center md:justify-items-center">
             <div className="footer-col">
-              <img src="/assets/footer-logo.svg" alt="" />
+              <img src="assets/footer-logo.svg" alt="" />
               <p>Sample text sample</p>
               <p>sample text sampletext</p>
               <p>textSample text textsample</p>
